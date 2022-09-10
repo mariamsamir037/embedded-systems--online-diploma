@@ -1,0 +1,278 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 7, 2022
+ *      Author: mariam
+ */
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+	//Write a C program to find sum of two matrix of order 2*2 using multidimensional arrays where, elements of matrix are entered by user.
+	/*
+	float matrix1[2][2], matrix2[2][2], sum[2][2];
+
+	for (int i=0; i<2;i++){
+		for (int j=0; j<2;j++){
+			printf("kindly enter element (%d,%d) of the first matrix: ",i,j);
+			fflush(stdin);
+			fflush(stdout);
+			scanf("%f",&matrix1[i][j]);
+		}
+	}
+
+	for (int i=0; i<2;i++){
+		for (int j=0; j<2;j++){
+			printf("kindly enter element (%d,%d) of the second matrix: ",i,j);
+			fflush(stdin);
+			fflush(stdout);
+			scanf("%f",&matrix2[i][j]);
+		}
+	}
+
+
+	printf("first matrix is: \n");
+	for (int i=0; i<2;i++){
+		for (int j=0; j<2;j++){
+			printf("%0.2f\t",matrix1[i][j]);
+		}
+		printf("\n");
+	}
+
+	printf("second matrix is: \n");
+	for (int i=0; i<2;i++){
+		for (int j=0; j<2;j++){
+			printf("%0.2f\t",matrix2[i][j]);
+		}
+		printf("\n");
+	}
+
+	printf("the sum of the 2 matrices: \n");
+	for (int i=0; i<2;i++){
+			for (int j=0; j<2;j++){
+				sum[i][j]=matrix1[i][j]+matrix2[i][j];
+				printf("%0.2f\t",sum[i][j]);
+			}
+			printf("\n");
+		}
+	 */
+	/*******************************************************************/
+
+	//This program takes n number of element from user( where, n is specified by user), stores data in an array and calculates the average of those numbers.
+	/*
+	int n;
+	float average=0.0 ,sum=0.0, data[10];
+
+	printf("enter number of elements: ");
+	fflush (stdin);
+	fflush(stdout);
+	scanf("%d",&n);
+
+	for(int i=0; i<n; i++){
+		printf("enter element %d: ",i+1);
+		fflush (stdin);
+		fflush(stdout);
+		scanf("%f",&data[i]);          //remember m3 scanf msh bn3ml precision y3ny msh h3ml kda scanf("%0.2f",&data[i]);
+	}
+
+	printf("the data u entered are: \n");
+	for(int i=0; i<n; i++){
+		printf(" %.2f\t ",data[i]);
+	}
+
+	for(int i=0; i<n; i++){
+		sum+=data[i];
+	}
+	printf("\nsum is:%0.2f \n",sum);
+	average=sum/n;
+	printf("the average is:%0.2f \n",average);
+	 */
+	/*********************************************************/
+
+	//Ex3: This program asks user to enter a matrix (size of matrix is specified by user) and this program finds the transpose of that matrix and displays it.
+	/*
+	int n;
+	printf("enter the number of elements: ");
+	fflush (stdin);
+	fflush(stdout);
+	scanf("%d",&n);
+
+	float matrix[10][10];
+	for (int i=0; i<n; i++){
+		for (int j=0; j<n; j++){
+			printf("item (%d,%d) of the matrix is:",i,j );
+			fflush (stdin);
+			fflush(stdout);
+			scanf("%f",&matrix[i][j]);
+		}
+	}
+
+	printf("\nthe matrix is:\n");
+	for (int i=0; i<n; i++){
+		for (int j=0; j<n; j++){
+			printf("%0.2f\t",matrix[i][j]);
+		}
+		printf("\n");
+	}
+
+	float transpose[10][10];
+	for (int i=0; i<n; i++){
+		for (int j=0; j<n; j++){
+			transpose[i][j]=matrix[j][i];
+		}
+	}
+
+	printf("the transpose of the matrix is:\n ");
+	for (int i=0; i<n; i++){
+			for (int j=0; j<n; j++){
+
+				printf("%.2f\t",transpose[i][j]);
+			}
+			printf("\n");
+	}
+	 */
+
+	/*********************************************************/
+
+	//C Program to Insert an element in an Array
+	/*
+
+	float arr[20];
+	int n;
+	printf("enter the number of elements: ");
+	fflush (stdin);
+	fflush(stdout);
+	scanf("%d",&n);
+	for(int i=0; i<n; i++){
+		printf("element %d is: ",i+1);
+		fflush (stdin);
+		fflush(stdout);
+		scanf("%f",&arr[i]);
+	}
+
+	printf("the elements in ur array are: \n");
+	for(int i=0; i<n; i++){
+		printf("%.2f\t ", arr[i]);
+	}
+
+	float extra;
+	printf("\nwhat is the element that u want to insert? ");
+	fflush (stdin);
+	fflush(stdout);
+	scanf("%f",&extra);
+	int position;
+	printf("where do u want to insert it? ");
+	fflush (stdin);
+	fflush(stdout);
+	scanf("%d",&position);
+
+	// increase the size by 1
+	n++;
+
+	// shift elements forward
+	for (int i = n-1; i >= position; i--)
+		arr[i] = arr[i - 1];
+
+	// insert extra element at required position
+	arr[position - 1] = extra;
+
+	// the updated array
+	for (int i = 0; i < n; i++)
+		printf("%.2f\t ", arr[i]);
+	printf("\n");
+	 */
+	/*********************************************************/
+	//C Program to Search an element in Array
+	/*
+	float arr[100];
+	int n;
+	printf("enter the number of elements: ");
+	fflush (stdin);
+	fflush(stdout);
+	scanf("%d",&n);
+
+	for(int i=0; i<n; i++){
+		printf("element %d is: ",i+1);
+		fflush (stdin);
+		fflush(stdout);
+		scanf("%f",&arr[i]);
+	}
+
+	printf("the elements in ur array are: \n");
+	for(int i=0; i<n; i++){
+		printf("%.2f\t ", arr[i]);
+	}
+
+	printf("\nenter the element u want to find its position: \n");
+	float element;
+	fflush (stdin);
+	fflush(stdout);
+	scanf("%f",&element);
+
+	for(int i=0; i<n; i++){
+		if (arr[i]==element){
+			printf("%.2f is at position %d\n",element,i+1);
+			return 0;
+		}
+	}
+	printf("the element u entered does not exist.");
+	 */
+
+	/*************************************************************/
+	//C Program to Find the Frequency of Characters in a String
+	/*
+	char words[30];
+	char character;
+	int freq=0;
+	printf("enter a string: ");
+	fflush (stdin);
+	fflush(stdout);
+	gets(words);
+	printf("Enter a character to find frequency: ");
+	fflush (stdin);
+	fflush(stdout);
+
+	scanf("%c",&character);
+	for(int i=0; i<strlen(words); i++){
+		if(character==words[i])
+			freq++;
+	}
+	printf("character %c is repeated %d times in:\"%s\"",character,freq,words);
+	 */
+	/************************************************/
+
+	//C Program to Find the Length of a String
+	/*
+	char sentence[30];
+	printf("enter any sentence: ");
+	fflush (stdin);
+	fflush(stdout);
+	gets(sentence);
+
+	int length=0;
+	for(int i=0; sentence[i]!=0; i++){            // sentence[i]!='\0'   ===== sentence[i]!=0
+		length++;
+	}
+	printf("%d",length);
+	 */
+	/**********************************************************/
+	//C Program to Reverse String Without Using Library Function
+/*
+	char sentence[30];
+	char reverse[30];
+	printf("enter a string: ");
+	fflush (stdin);
+	fflush(stdout);
+	gets(sentence);
+	int n=strlen(sentence);
+
+	for(int i=0; sentence[i]!='\0'; i++){
+		reverse[i]=sentence[n-i-1];
+	}
+	printf("%s",reverse);
+*/
+
+	return 0;
+}
