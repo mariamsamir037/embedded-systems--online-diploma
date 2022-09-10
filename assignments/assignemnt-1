@@ -1,0 +1,219 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 26, 2022
+ *      Author: mariam
+ */
+
+#include <stdio.h>
+int main(){
+					/*********HomeWork#1********/
+/*
+	//EX1: Write C Program to Print a Sentence
+	printf("C Programming\n");
+
+	//EX2: Write C Program to Print a Integer Entered by a User
+	int numb;
+	printf("please enter a number: ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d", &numb);
+	printf("u entered: %d\n",numb);
+
+	//EX3: Write C Program to Add Two Integers
+	int a,b;
+	int sum=0;
+	printf("enter two integers: \n");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d %d",&a,&b);
+	sum=a+b;
+	printf("sum= %d\n",sum );
+
+	//EX4:	Write C Program to Multiply two Floating Point Numbers
+	float x,y;
+	float product=0;
+	printf("enter two numbers: \n");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%f %f",&x,&y);
+	product=x*y;
+	printf("sum= %0.2f\n",product);
+
+	//EX5:	Write C Program to Find ASCII Value of a Character
+	char ch;
+	printf("enter a character: \n");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%c",&ch);
+	printf("the ASCII value of %c is %d",ch,ch);
+
+	//EX6:	Write Source Code to Swap Two Numbers
+	int a,b;
+	int temp=0;
+	printf("enter value of a: ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&a);
+	printf("enter value of b: ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&b);
+	temp=a;
+	a=b;
+	b=temp;
+	printf("after swaping, the value of a: %d \n",a);
+	printf("after swaping, the value of b: %d \n", b);
+
+	//EX7: it is an interview trick : Write Source Code to Swap Two Numbers without temp variable.
+	int a,b;
+	printf("enter value of a: ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&a);
+	printf("enter value of b: ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&b);
+	a+=b;
+	b=a-b;
+	a-=b;
+	printf("after swaping, the value of a: %d \n",a);
+	printf("after swaping, the value of b: %d \n", b);
+
+*/
+
+								/*********HomeWork#2********/
+/*
+
+	//Ex1: check whether a number is even or odd
+	int a;
+	printf("enter a number: ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&a);
+	if(a%2==0)
+		printf("%d is even",a);
+	else
+		printf("%d is odd",a);
+
+	//EX2: check an alphabet whether consonant or vowel
+	char ch;
+	printf("enter an alphabet: ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%c",&ch);
+	if((ch == 'a'|| ch=='A')||(ch=='e'|| ch=='E')||(ch=='i'|| ch=='I')||(ch=='o'|| ch=='O')||(ch=='u'|| ch=='U'))
+		printf("%c is a vowel",ch);
+	else
+		printf("%c is a consonant",ch);
+
+	//EX3: find largest number among 3 numbers
+	int a,b,c;
+	printf("enter first number:");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&a);
+	printf("enter second number:");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&b);
+	printf("enter third number:");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&c);
+	if(a>b && a>c)
+		printf("%d is the largest",a);
+	else if(b>a && b>c)
+		printf("%d is the largest",b);
+	else
+		printf("%d is the largest",c);
+
+
+	//EX4: check whether a number is positive or negative
+	int a;
+	printf("enter a number:");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&a);
+	if(a<0)
+		printf("%d is negative",a);
+	else if(a>0)
+		printf("%d is positive",a);
+	else
+		printf("you entered zero");
+
+
+	//EX5: check whether a character is an alphabet or not
+	char ch;
+	printf("enter a character:");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%c",&ch);
+	if((ch >= 97 && ch <= 122) || (ch >= 65 && ch <= 90))   //if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+		printf("%c is an alphabet",ch);
+	else
+		printf("%c is not an alphabet",ch);
+
+
+	//EX6: calculate the sum of natural numbers
+	int x,sum=0;
+	printf("enter a number:");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&x);
+	for (int i=1;i<=x;i++)
+	{
+		sum+=i;
+	}
+	printf("%d",sum);
+
+
+	//EX7: factorial
+	int x, factorial=1;
+	printf("enter a number:");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&x);
+	if(x<0)
+		printf("ERROR!! factorial of negative number does not exist\n");
+	else if(x==0)
+		printf("factorial of zero is 1\n");
+	else if(x>0){
+		for(int i=1;i<=x;i++){
+			factorial*=i;
+		}
+		printf("factorial of %d is: %d\n",x,factorial);
+	}
+
+
+	//EX8: calculator using switch
+	float a,b;
+	char operation;
+	printf("enter two number:");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%f %f",&a,&b);
+	printf("choose an operation: + - * /: ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%c",&operation);
+	switch (operation)
+	{
+	case '+':
+	printf("addition: %0.2f", a+b);
+	break;
+	case '-':
+	printf("difference: %0.2f", a-b);
+	break;
+	case '*':
+	printf("multiplication: %0.2f", a*b);
+	break;
+	case '/':
+	printf("division: %0.2f", a/b);
+	break;
+}
+*/
+return 0;
+
+}
