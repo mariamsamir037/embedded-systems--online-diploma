@@ -1,0 +1,69 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 7, 2022
+ *      Author: mariam
+ */
+
+#include <stdio.h>
+
+typedef unsigned char uint8_t;
+typedef int uint32_t;
+
+struct Student {
+	uint8_t name[30];
+	uint32_t roll;
+	uint32_t mark;
+};
+
+int main(){
+	/*Q1
+	struct Student student;
+		printf("enter the student name: ");
+		fflush(stdin);
+		fflush(stdout);
+		gets(student.name);
+		printf("enter the student roll number: ");
+		fflush(stdin);
+		fflush(stdout);
+		scanf("%d",&student.roll);
+		printf("enter the student mark: ");
+		fflush(stdin);
+		fflush(stdout);
+		scanf("%d",&student.mark);
+
+		printf("display the student info\n");
+		printf("student's name is: %s",student.name);
+		printf("\nstudent's roll number is: %d",student.roll);
+		printf("\nstudent's mark is: %d",student.mark);
+*/
+
+
+	struct Student student[10];
+	int i;
+	for(i=0; i<10; i++){
+	printf("enter the student name: ");
+	fflush(stdin);
+	fflush(stdout);
+	gets(student[i].name);
+	printf("enter the student roll number: ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&student[i].roll);
+	printf("enter the student mark: ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&student[i].mark);
+	printf("\n");
+	}
+
+	printf("*Display the student info*");
+	for(i=0; i<10; i++){
+	printf("\nstudent's name is: %s",student[i].name);
+	printf("\nstudent's roll number is: %d",student[i].roll);
+	printf("\nstudent's mark is: %d",student[i].mark);
+	}
+	return 0;
+}
+
+
