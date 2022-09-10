@@ -1,0 +1,109 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 20, 2022
+ *      Author: Mariam
+ */
+
+#include <stdio.h>
+#include <string.h>
+#define SIZE 60
+void reverse (char sentence[]);
+int power (int,int);
+void prime (int x,int y);
+int factorial(int numb);
+
+int main(){
+
+	int start,end;
+	printf("enter the start and end values: ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d %d",&start,&end);
+
+	if(start>end){
+		int temp;
+		temp=start;
+		start=end;
+		end=temp;
+	}
+	prime(start,end);
+
+
+
+	/*
+	int numb;
+	printf("Enter a positive integer: ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&numb);
+	printf("Factorial of %d is %d",numb ,factorial(numb));
+	 */
+
+	/*
+	char sentence[SIZE];
+	printf("enter a sentence: ");
+	fflush(stdin);
+	fflush(stdout);
+	gets(sentence);
+	reverse(sentence);
+	 */
+
+	/*
+	int base,power;
+	printf("Enter an integer with its power: ");
+	fflush(stdin);
+	fflush(stdout);
+	scanf("%d",&base);
+	scanf("%d",&power);
+	 */
+	/*
+	int result=power(2,3);
+	printf("%d",result);
+	 */
+
+	return 0;
+}
+/*
+void prime (int start,int end){
+	int i, count;
+	for(i=start; i<=end; i++){
+		int flag=0;
+		for(count=2; count<i/2; count++){
+			if(i % count == 0 ||i==1 || i==0){
+				flag=1;
+				break;
+			}
+		}
+		if(flag==0)
+			printf("%d\n",i);
+	}
+}
+*/
+/*
+int factorial(int numb){
+	if(numb>=1)        //aw if(numb>0)
+		return numb*factorial(numb-1);
+	else
+		return 1;
+}
+ */
+
+/*
+void reverse (char sentence[]){
+	int i;
+	char reverse[SIZE];
+	for (i=0; i!='0'; i++){
+		reverse[i]=sentence[strlen(sentence)-i-1];
+	}
+printf("the reversed sentence is: %s",reverse);
+}
+ */
+/*
+int power (int base,int power){
+	if (power != 0)
+		return (base * power(base, power - 1));
+	else
+		return 1;
+}
+ */
