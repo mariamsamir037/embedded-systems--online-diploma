@@ -1,0 +1,9 @@
+.global reset //let reset section global
+
+
+reset:   //reset section
+	ldr sp, =stack_top   //load reg , getbaha mn linkerScript 
+	bl main				//branch label, here i can change main to anything else(mariam) but of course not preferred as it is well known by main
+
+stop: 
+	b stop        //branch
