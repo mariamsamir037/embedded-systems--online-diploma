@@ -1,0 +1,6 @@
+#include "uart.h"
+unsigned char const string_buffer[100]="Learn-in-depth:Mariam";
+
+void main(void){
+	uart_send_string(string_buffer);	
+}
